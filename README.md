@@ -1,3 +1,4 @@
+[![Coverage Status](https://coveralls.io/repos/github/samutoljamo/COMP.SE.200-2023-2024-1/badge.svg?branch=main)](https://coveralls.io/github/samutoljamo/COMP.SE.200-2023-2024-1?branch=main)
 # Student template
 
 ## Purpose of this repository
