@@ -18,6 +18,13 @@ test('reduces an array of objects using a custom iteratee', () => {
         { name: 'Jane', age: 30 },
         { name: 'Bob', age: 35 }
     ]
-    const combinedAges = reduce(objects, (acc, obj) => acc + obj.age, 0)
-    expect(combinedAges).toBe(90)
+    const combinedAges = reduce(objects, (acc, obj) => acc + obj.age, 5)
+    expect(combinedAges).toBe(95)
+})
+
+test('reduces a non-array input', () => {
+    const string = 'Hello World!'
+    const result = reduce(string, (acc, char) => acc + char)
+
+    expect(result).toBe(string)
 })

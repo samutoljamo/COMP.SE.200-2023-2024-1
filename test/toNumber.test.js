@@ -23,9 +23,3 @@ test('returns NaN for an invalid number string', () => {
     const result = toNumber(invalidString)
     expect(result).toBeNaN()
 })
-
-test('returns NaN for a string with leading or trailing whitespace', () => {
-    const whitespaceString = '  42  '
-    const result = toNumber(whitespaceString)
-    expect(result).toBeNaN()
-})

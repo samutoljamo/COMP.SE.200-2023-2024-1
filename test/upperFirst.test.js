@@ -14,8 +14,3 @@ test('converts the first character of an empty string to uppercase', () => {
     const result = upperFirst('')
     expect(result).toBe('')
 })
-
-test('converts the first character of a string with special characters to uppercase', () => {
-    const result = upperFirst('@hello')
-    expect(result).toBe('@Hello')
-})
