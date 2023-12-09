@@ -23,3 +23,7 @@ test('returns a new array with filtered elements', () => {
     const filteredNumbers = filter(numbers, (num) => num % 2 === 0)
     expect(filteredNumbers).toEqual([2, 4])
 })
+
+test('returns an empty array for null', () => {
+    expect(filter(null, Boolean)).toEqual([])
+})

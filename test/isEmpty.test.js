@@ -47,3 +47,31 @@ test('returns true for empty Set', () => {
 test('returns true for empty prototype object', () => {
     expect(isEmpty(Object.create(null))).toBe(true)
 })
+
+test('returns false for non-empty prototype object', () => {
+    expect(isEmpty(Object.create({ a: 1 }))).toBe(false)
+})
+    
+test('returns true for empty buffer', () => {
+    expect(isEmpty(Buffer.alloc(0))).toBe(true)
+})
+
+test('returns false for non-empty buffer', () => {
+    expect(isEmpty(Buffer.alloc(1))).toBe(false)
+})
+
+test('returns true for empty typed array', () => {
+    expect(isEmpty(new Uint8Array())).toBe(true)
+})
+
+test('returns false for non-empty typed array', () => {
+    expect(isEmpty(new Uint8Array(1))).toBe(false)
+})
+
+test('returns true for empty arguments', () => {
+    expect(isEmpty((function() { return arguments })())).toBe(true)
+})
+
+test('returns false for non-empty arguments', () => {
+    expect(isEmpty((function() { return arguments })(1))).toBe(false)
+})

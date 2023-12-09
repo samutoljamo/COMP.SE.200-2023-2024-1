@@ -19,3 +19,7 @@ test('returns true if all elements are greater than 0', () => {
 test('returns false if any element is less than 0', () => {
     expect(every([1, 2, -3], (value) => value > 0)).toBe(false)
 })
+
+test('returns true for null', () => {
+    expect(every(null, Boolean)).toBe(true)
+})

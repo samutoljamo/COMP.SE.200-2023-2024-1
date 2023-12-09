@@ -35,3 +35,11 @@ test('converts true to 1', () => {
 test('converts false to 0', () => {
     expect(toFinite(false)).toBe(0)
 })
+
+test('converts 0 to 0', () => {
+    expect(toFinite(0)).toBe(0)
+})
+
+test('converts negative infinity to min integer', () => {
+    expect(toFinite(-Infinity)).toBe(-1.7976931348623157e+308)
+})
