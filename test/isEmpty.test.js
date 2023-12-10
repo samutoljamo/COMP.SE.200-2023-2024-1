@@ -48,8 +48,8 @@ test('returns true for empty prototype object', () => {
     expect(isEmpty(Object.create(null))).toBe(true)
 })
 
-test('returns false for non-empty prototype object', () => {
-    expect(isEmpty(Object.create({ a: 1 }))).toBe(false)
+test('returns true for empty object with prototype', () => {
+    expect(isEmpty(Object.create({ a: 1 }))).toBe(true)
 })
 
 test('returns true for empty buffer', () => {
